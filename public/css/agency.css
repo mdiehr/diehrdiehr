@@ -5,6 +5,7 @@
  */
 
 body {
+    background-color: #f6f6f6;
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -276,7 +277,7 @@ header {
 
 header .intro-text {
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
 }
 
 header .intro-text .intro-lead-in {
