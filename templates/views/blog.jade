@@ -22,10 +22,6 @@ mixin post(post)
 		if post.content.extended
 			p.read-more: a(href='/blog/post/' + post.slug) Read more...
 
-block intro
-	.container
-		h1= data.category ? data.category.name : 'Blog'
-
 block content
 	.container: .row
 		.col-sm-12.col-md-12
@@ -33,16 +29,7 @@ block content
 				h3.text-muted Invalid Category.
 			else
 				if data.posts.results.length
-					if data.posts.totalPages > 1
-						h4.text-weight-normal Showing 
-							strong #{data.posts.first}
-							|  to 
-							strong #{data.posts.last}
-							|  of 
-							strong #{data.posts.total}
-							|  posts.
-					else
-						h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+					//h4.text-weight-normal We can put some intro text here.
 					.blog
 						each post in data.posts.results
 							+post(post)

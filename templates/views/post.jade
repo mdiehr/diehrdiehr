@@ -1,16 +1,15 @@
 extends ../layouts/blog-layout
 
 block content
-	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+	.container: .row: .col-sm-12.col-md-12
 		article
-			p: a(href='/blog') &larr; back to the blog
-			hr
+			p: h4.text-weight-normal: a(href='/blog') &larr; back
 			if !data.post
 				h2 Invalid Post.
 			else
 				header
-					h1= data.post.title
-					h5 Posted 
+					h2= data.post.title
+					p.lead.text-muted Posted 
 						if data.post.publishedDate
 							| on #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
 						if data.post.categories && data.post.categories.length
