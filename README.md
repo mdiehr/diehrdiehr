@@ -1,2 +1,0 @@
-# diehrdiehr
-Diehr Diehr Projects
