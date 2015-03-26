@@ -1,0 +1,93 @@
+extends ../layouts/default-layout
+
+block content
+	// Services Section
+	section#services
+		.container
+			.row
+				.col-lg-12.text-center
+					h2.section-heading Services
+					h3.section-subheading.text-muted We do the full stack of technologies.
+			.row.text-center
+				.col-md-4
+					span.fa-stack.fa-4x
+						i.fa.fa-circle.fa-stack-2x.text-primary
+						i.fa.fa-cogs.fa-stack-1x.fa-inverse
+					h4.service-heading RESTful APIs 
+					p.text-muted
+						| We design robust, restful APIs so your website, web app and mobile app can all share the same API.
+				.col-md-4
+					span.fa-stack.fa-4x
+						i.fa.fa-circle.fa-stack-2x.text-primary
+						i.fa.fa-server.fa-stack-1x.fa-inverse
+					h4.service-heading Database
+					p.text-muted
+						| Behind the scenes is our specialty. We offer experience in traditional SQL databases, as well as 
+						| NoSQL backends such as Mongo or CouchDB
+				.col-md-4
+					span.fa-stack.fa-4x
+						i.fa.fa-circle.fa-stack-2x.text-primary
+						i.fa.fa-laptop.fa-stack-1x.fa-inverse
+					h4.service-heading Maintainability
+					p.text-muted
+						| With dillegant care put into design, matched by our discplined implemntation, we promise efficient and easy to maintain code
+	// Team Section
+	section#team.bg-light-gray
+		.container
+			.row
+				.col-lg-12.text-center
+					h2.section-heading Meet The Dream Team
+			.row.center-block(style='max-width: 800px')
+				.col-sm-6
+					.team-member
+						img.img-responsive.img-circle(src='images/team/mark.jpg', alt='')
+						h4 Mark Diehr
+						p.text-muted Orlando, FL
+						ul.list-inline.social-buttons
+							li
+								a(href='https://github.com/mdiehr')
+									i.fa.fa-github
+				.col-sm-6
+					.team-member
+						img.img-responsive.img-circle(src='images/team/brian.jpg', alt='')
+						h4 Brian Diehr
+						p.text-muted Tampa, FL
+						ul.list-inline.social-buttons
+							li
+								a(href='https://github.com/bdiehr')
+									i.fa.fa-github
+			.row
+				.col-lg-8.col-lg-offset-2.text-center
+					p.large.text-muted
+						| From backend databases to frontend designs, brought to you by a small team
+						| of self-motivated young professionals located within Florida.
+						| With over 15 years combined experience in the professional development world over a vast number
+						| of technologies.
+	section#contact
+		.container
+			.row
+				.col-lg-12.text-center
+					h2.section-heading Contact Us
+					h3.section-subheading.text-muted We would love to chat.
+			.row
+				.col-lg-12
+					form#contactForm(name='sentMessage', novalidate='')
+						.row
+							.col-md-6
+								.form-group
+									input#name.form-control(type='text', placeholder='Your Name *', required='', data-validation-required-message='Please enter your name.')
+									p.help-block.text-danger
+								.form-group
+									input#email.form-control(type='email', placeholder='Your Email *', required='', data-validation-required-message='Please enter your email address.')
+									p.help-block.text-danger
+								.form-group
+									input#phone.form-control(type='tel', placeholder='Your Phone *', required='', data-validation-required-message='Please enter your phone number.')
+									p.help-block.text-danger
+							.col-md-6
+								.form-group
+									textarea#message.form-control(placeholder='Your Message *', required='', data-validation-required-message='Please enter a message.')
+									p.help-block.text-danger
+							.clearfix
+							.col-lg-12.text-center
+								#success
+								button.btn.btn-xl(type='submit') Send Message
