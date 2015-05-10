@@ -9,6 +9,8 @@ var keystone = require('keystone');
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
 
+console.log(process.versions);
+
 keystone.init({
 
 	'name': 'diehrdiehr',
